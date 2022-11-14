@@ -50,4 +50,13 @@ function caesarCipher(str) {
     return shiftedStr;
 }
 
-export {capitalize, reverseString, calculator, caesarCipher}
+function analyzeArray(arr) {
+    return {
+        average: arr.reduce((a, b) => { return a + b }) / arr.length,
+        min: Math.min(...arr),
+        max: Math.max(...arr),
+        length: arr.length,
+    }
+}
+
+export {capitalize, reverseString, calculator, caesarCipher, analyzeArray}

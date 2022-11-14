@@ -3,6 +3,7 @@ import {
   reverseString,
   calculator,
   caesarCipher,
+  analyzeArray
 } from './practice.js';
 
 test('checks if a string has its first character capitalized', () => {
@@ -49,4 +50,19 @@ describe('caesarCipher function', () => {
       "Ifmmp xpsme, jto'u upebz hsfbu?"
     );
   });
+});
+
+describe('analyzeArray tests', () => {
+    test('the average property correctly holds the average of the input array', () => {
+        expect(analyzeArray([1, 8, 3, 4, 2, 6]).average).toBe(4);
+    });
+    test('the min property correctly holds the minimum value of the input array', () => {
+        expect(analyzeArray([6, 7, 3, 8, 79]).min).toBe(3);
+    });
+    test('the max property correctly holds the maximum value of the input array', () => {
+        expect(analyzeArray([7, 2, 6, 10, 67, 1, 87]).max).toBe(87);
+    });
+    test('the length property correctly holds the length of the input array', () => {
+        expect(analyzeArray([5, 10, 78, 123, 2, 1, 65]).length). toBe(7);
+    })
 });
